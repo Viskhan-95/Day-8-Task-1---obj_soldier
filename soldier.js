@@ -8,15 +8,18 @@ const soldier = {
     supplies: 3,
 
     fire: function () {
-        patrons--;
+        this.patrons--;
+        
         console.log('бах-бах');
-        if(patrons === 0) {
+        
+        if(this.patrons === 0) {
             console.log('Обойма пуста. Перезаредитесь');
         }
+        return false;
     },
 
     recharge: function () {
-        patrons = 30;
+        this.patrons = 30;
         this.supplies--;
         
         console.log('Перезарядка');
@@ -24,6 +27,7 @@ const soldier = {
         if(this.supplies === 0) {
             console.log('Не осталось припасов');
         }
+        return false;
     },
 
     hurt: function () {
@@ -31,5 +35,8 @@ const soldier = {
         if(this.health === 0) {
             console.log('Ты проиграл')
         }
+        return false;
     },
 };
+
+soldier.fire();
