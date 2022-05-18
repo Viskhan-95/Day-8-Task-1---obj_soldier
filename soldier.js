@@ -9,10 +9,10 @@ const soldier = {
 
     fire: function () {
         this.patrons--;
-        
+
         console.log('бах-бах');
-        
-        if(this.patrons === 0) {
+
+        if (this.patrons === 0) {
             console.log('Обойма пуста. Перезаредитесь');
         }
         return false;
@@ -21,10 +21,10 @@ const soldier = {
     recharge: function () {
         this.patrons = 30;
         this.supplies--;
-        
+
         console.log('Перезарядка');
 
-        if(this.supplies === 0) {
+        if (this.supplies === 0) {
             console.log('Не осталось припасов');
         }
         return false;
@@ -32,7 +32,7 @@ const soldier = {
 
     hurt: function () {
         this.health--;
-        if(this.health === 0) {
+        if (this.health === 0) {
             console.log('Ты проиграл')
         }
         return false;
